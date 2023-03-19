@@ -13,9 +13,9 @@ function convertCurrency() {
     alert("Proszę wpisać kwotę");
     return;
   }
-  //http://api.nbp.pl/api/exchangerates/rates/{table}/{code}/
+
   loader.style.display = "block";
-  fetch(`https://api.nbp.pl/api/exchangerates/rates/a/${currencyCode}/`)
+  fetch(`https://api.nbp.pl/api/exchangerates/rates/a/${currencyCode}/today/`)
     .then((response) => response.json())
     .then((data) => {
       const rate = data.rates[0].mid;
@@ -26,7 +26,7 @@ function convertCurrency() {
       loader.style.display = "none";
     })
     .catch((error) => {
-      alert("Wystąpił błąd. Spróbuj ponownie później.");
+      alert("Błąd. Spróbuj ponownie później.");
       console.error(error);
       loader.style.display = "none";
     });
