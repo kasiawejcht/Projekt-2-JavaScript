@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Przelicznik walut</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Przelicznik walut</h1>
+    <div class="loader"></div>
+    <form>
+      <label for="currency">Wybierz walutę:</label>
+      <select id="currency">
+        <option value="EUR">Euro</option>
+        <option value="USD">Dolary amerykańskie</option>
+        <option value="CHF">Franki szwajcarskie</option>
+      </select>
+      <input type="number" id="amount" placeholder="Wpisz kwotę" />
+      <button type="button" id="convert">Przelicz</button>
+    </form>
+    <p id="result"></p>
+    <script src="script.js"></script>
+  </body>
+</html>
