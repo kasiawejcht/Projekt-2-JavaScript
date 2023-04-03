@@ -9,6 +9,10 @@ convertButton.addEventListener("click", convertCurrency);
 function convertCurrency() {
   const currencyCode = selectCurrency.value;
   const amount = amountInput.value;
+  if (amount <= 0) {
+    alert("Kwota musi być większa niż zero");
+    return;
+  }
   if (amount === "") {
     alert("Proszę wpisać kwotę");
     return;
